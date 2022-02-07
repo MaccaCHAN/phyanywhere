@@ -12,6 +12,8 @@ It has a quiz of important formulae so as to help you to revise and memorize the
 
 There is also a personalized 'My Formula List' so that you can have your own list of formulae that you want to focus on. 
 
+## Download link:
+
 App Store link: https://apps.apple.com/app/physics-anywhere/id1604419362
 
 Google Play link: https://play.google.com/store/apps/details?id=com.maccachan.physics_anywhere 
