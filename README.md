@@ -1,16 +1,1 @@
-# dse_physics_app
-
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Physics Anywhere App is created for helping your study of physics. The scope of the content is based on the syllabus of HKDSE physics. It has a quiz of important formulae so as to help you to revise and memorize the formula anywhere, anytime.  There is also a personalized 'My Formula List' so that you can have your own list of formulae that you want to focus on. More content will be coming. 
