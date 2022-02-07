@@ -1,6 +1,6 @@
 # Physics Anywhere
 
-Physics Anywhere App is created for helping your study of physics. The scope of the content is based on the syllabus of HKDSE physics.
+Physics Anywhere is an app published in both App Store and Google Play. It is created for helping students' study of physics. The scope of the content is based on the syllabus of HKDSE physics.
 
 ## Features
 
@@ -11,3 +11,6 @@ It has a quiz of important formulae so as to help you to revise and memorize the
 ### 2. Customize Formula List
 
 There is also a personalized 'My Formula List' so that you can have your own list of formulae that you want to focus on. 
+
+App Store link: https://apps.apple.com/app/physics-anywhere/id1604419362 
+Google Play link: https://play.google.com/store/apps/details?id=com.maccachan.physics_anywhere 
