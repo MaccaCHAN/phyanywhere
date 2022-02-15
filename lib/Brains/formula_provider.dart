@@ -46,9 +46,6 @@ class FormulaProvider extends ChangeNotifier {
   };
 
 
-
-
-
   // TOPIC SELECTION START ///////////////////////////////////
 
   List<QSetListWithCheckState> _topicsInMyTiles = [
@@ -119,10 +116,18 @@ class FormulaProvider extends ChangeNotifier {
   }
 
   void checkAllMech() {
-    for (QSetListWithCheckState x in _topicsInMyTiles[2].children) {
+    QSetListWithCheckState? qSetListWithCheckState;
+    for (QSetListWithCheckState x in _topicsInMyTiles){
+      if (x.title == 'Mechanics'){
+        qSetListWithCheckState = x;
+      }
+    }
+    if(qSetListWithCheckState == null)
+      return;
+    for (QSetListWithCheckState x in qSetListWithCheckState.children) {
       x.isChecked = true;
     }
-    for (QSetListWithCheckState x in _topicsInMyTiles[2].children) {
+    for (QSetListWithCheckState x in qSetListWithCheckState.children) {
       addTopic(x);
     }
     formulaQuizQuestionSetList = formulaQuizQuestionSetList.toSet().toList();
@@ -131,20 +136,36 @@ class FormulaProvider extends ChangeNotifier {
   }
 
   void uncheckAllMech() {
-    for (QSetListWithCheckState x in _topicsInMyTiles[2].children) {
+    QSetListWithCheckState? qSetListWithCheckState;
+    for (QSetListWithCheckState x in _topicsInMyTiles){
+      if (x.title == 'Mechanics'){
+        qSetListWithCheckState = x;
+      }
+    }
+    if(qSetListWithCheckState == null)
+      return;
+    for (QSetListWithCheckState x in qSetListWithCheckState.children) {
       x.isChecked = false;
     }
-    for (QSetListWithCheckState x in _topicsInMyTiles[2].children) {
+    for (QSetListWithCheckState x in qSetListWithCheckState.children) {
       removeTopic(x);
     }
     notifyListeners();
   }
 
   void checkAllEAndM() {
-    for (QSetListWithCheckState x in _topicsInMyTiles[5].children) {
+    QSetListWithCheckState? qSetListWithCheckState;
+    for (QSetListWithCheckState x in _topicsInMyTiles){
+      if (x.title == 'Electricity & Magnetism'){
+        qSetListWithCheckState = x;
+      }
+    }
+    if(qSetListWithCheckState == null)
+      return;
+    for (QSetListWithCheckState x in qSetListWithCheckState.children) {
       x.isChecked = true;
     }
-    for (QSetListWithCheckState x in _topicsInMyTiles[5].children) {
+    for (QSetListWithCheckState x in qSetListWithCheckState.children) {
       addTopic(x);
     }
     formulaQuizQuestionSetList = formulaQuizQuestionSetList.toSet().toList();
@@ -153,10 +174,18 @@ class FormulaProvider extends ChangeNotifier {
   }
 
   void uncheckAllEAndM() {
-    for (QSetListWithCheckState x in _topicsInMyTiles[5].children) {
+    QSetListWithCheckState? qSetListWithCheckState;
+    for (QSetListWithCheckState x in _topicsInMyTiles){
+      if (x.title == 'Electricity & Magnetism'){
+        qSetListWithCheckState = x;
+      }
+    }
+    if(qSetListWithCheckState == null)
+      return;
+    for (QSetListWithCheckState x in qSetListWithCheckState.children) {
       x.isChecked = false;
     }
-    for (QSetListWithCheckState x in _topicsInMyTiles[5].children) {
+    for (QSetListWithCheckState x in qSetListWithCheckState.children) {
       removeTopic(x);
     }
     formulaQuizQuestionSetList = formulaQuizQuestionSetList.toSet().toList();
@@ -271,9 +300,6 @@ class FormulaProvider extends ChangeNotifier {
   }
 
   void inOrderQuestionSet() {
-    // formulaQuizQuestionSetList.add(radioactivity[4]);
-    // _selectedQuestionSet = formulaQuizQuestionSetList[0];
-
     _selectedQuestionSet = formulaQuizQuestionSetList[_questionNumber - 1];
   } // for testing
 
@@ -398,12 +424,9 @@ class FormulaProvider extends ChangeNotifier {
     }  else {return true; }
   }
 
-
-
   bool checkAns() {
     bool result;
     // final provider = Provider.of<FormulaQuizBrain>(context, listen: false);
-
     if (hasAnswer2()) {
       if (!_selectedQuestionSet.twoWayAns) {
         selectedAnswer1Getter == _selectedQuestionSet.correctAnswer1 &&
@@ -525,7 +548,6 @@ class FormulaProvider extends ChangeNotifier {
 
  // MyFormulaList //
   void updateMyFormulaMap() {
-
     List list = Hive.box<String>('myFormulaId').values.toList();
     print('IDlist is empty? ${list.isEmpty}');
     print('box is empty? ${Hive.box<String>('myFormulaId').isEmpty}');
@@ -551,11 +573,5 @@ class FormulaProvider extends ChangeNotifier {
   // MyFormulaList //
 
 
-
-// Ad mob//
-
-
-
 }
 
-// Ad Mob//

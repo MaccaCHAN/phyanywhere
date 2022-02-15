@@ -11,12 +11,12 @@ class QSetListWithCheckState {
     this.children = const <QSetListWithCheckState>[], this.isChecked = false,
     this.checkAll=false, this.selectAll});
 
-  factory QSetListWithCheckState.clone(QSetListWithCheckState source){
-    return QSetListWithCheckState(title: source.title,
-        questionSetList: source.questionSetList,
-      children: source.children, isChecked: source.isChecked,
-        checkAll: source.checkAll, selectAll: source.selectAll );
-  }
+  // factory QSetListWithCheckState.clone(QSetListWithCheckState source){
+  //   return QSetListWithCheckState(title: source.title,
+  //       questionSetList: source.questionSetList,
+  //     children: source.children, isChecked: source.isChecked,
+  //       checkAll: source.checkAll, selectAll: source.selectAll );
+  // }
 
   void toggleIsChecked () {
     isChecked = !isChecked;

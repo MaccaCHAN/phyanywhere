@@ -132,3 +132,5 @@ app.*.map.json
 
 **/images
 **/lib/Brains/ad_helper.dart
+**/design_docs
+**/question_bank_docs

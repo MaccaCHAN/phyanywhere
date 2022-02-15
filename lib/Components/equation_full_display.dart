@@ -69,9 +69,9 @@ class EquationFullDisplay extends StatelessWidget {
                           iconSize:  this.isPortrait ? isTabAspectRatio ?  60 :  35.h: 70,
                           isStarred: formulaProviderNotListen.myFormulaMap.containsKey(questionSet.id),
                           valueChanged: (_isFavorite) {
-                            _isFavorite ? formulaProviderNotListen.myFormulaMap[questionSet.id]=questionSet:
-                            formulaProviderNotListen.myFormulaMap.remove(questionSet.id);
-                            formulaProviderNotListen.updateInMyFormulaIdListFromMap();
+                            _isFavorite ? formulaProviderNotListen.myFormulaMap[questionSet.id]=questionSet: //add Qset into MyFormulaMap if Starred
+                            formulaProviderNotListen.myFormulaMap.remove(questionSet.id); //remove Qset from MyFormulaMap if Unstarred
+                            formulaProviderNotListen.updateInMyFormulaIdListFromMap(); //update myFormulatIDList
                             print('MyFormulaMap = ${formulaProviderNotListen.myFormulaMap}');
                             ScaffoldMessenger.of(context).showSnackBar
                               (SnackBar(content: _isFavorite ?
